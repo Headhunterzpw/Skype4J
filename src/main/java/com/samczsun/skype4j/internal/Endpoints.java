@@ -59,7 +59,7 @@ public class Endpoints {
     public static final Provider<String> AUTHORIZATION = skype -> "skype_token " + skype.getSkypeToken();
     public static final Provider<String> COOKIE = skype -> "skypetoken_asm=" + skype.getSkypeToken();
     public static final Endpoints ACCEPT_CONTACT_REQUEST = new Endpoints(
-            "https://api.skype.com/users/self/contacts/auth-request/%s/accept").skypetoken();
+            "https://contacts.skype.com/contacts/v2/users/%s/invites/%s/accept").skypetoken();
     public static final Endpoints GET_JOIN_URL = new Endpoints("https://api.scheduler.skype.com/threads").skypetoken();
     public static final Endpoints CHAT_INFO_URL = new Endpoints(
             "https://%sclient-s.gateway.messenger.live.com/v1/threads/%s/?view=msnp24Equivalent").cloud().regtoken();
